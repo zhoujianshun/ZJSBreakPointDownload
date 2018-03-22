@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Z7t-6Z-pjU">
+                                <rect key="frame" x="28" y="98" width="319" height="2"/>
+                            </progressView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入下载地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3lq-gD-ntG">
+                                <rect key="frame" x="12" y="48" width="351" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xps-KX-PM5">
+                                <rect key="frame" x="175.5" y="108" width="23.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxv-Br-baC">
+                                <rect key="frame" x="140.5" y="157" width="31" height="30"/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oPN-zH-Jit"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRg-rr-QtX">
+                                <rect key="frame" x="203" y="157" width="31" height="30"/>
+                                <state key="normal" title="删除"/>
+                                <connections>
+                                    <action selector="deleteAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7vP-is-pmJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aRg-rr-QtX" firstAttribute="centerY" secondItem="kxv-Br-baC" secondAttribute="centerY" id="2u2-HL-cui"/>
+                            <constraint firstItem="kxv-Br-baC" firstAttribute="top" secondItem="Xps-KX-PM5" secondAttribute="bottom" constant="28" id="4r8-dH-GGb"/>
+                            <constraint firstItem="Xps-KX-PM5" firstAttribute="top" secondItem="Z7t-6Z-pjU" secondAttribute="bottom" constant="8" id="HtW-su-Kgx"/>
+                            <constraint firstItem="Xps-KX-PM5" firstAttribute="centerX" secondItem="Z7t-6Z-pjU" secondAttribute="centerX" id="Zuc-CH-hv5"/>
+                            <constraint firstItem="aRg-rr-QtX" firstAttribute="leading" secondItem="Xps-KX-PM5" secondAttribute="centerX" constant="16" id="a3f-uh-vdV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z7t-6Z-pjU" secondAttribute="trailing" constant="12" id="cKa-Fm-ki8"/>
+                            <constraint firstItem="3lq-gD-ntG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="dvl-FS-sYJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3lq-gD-ntG" secondAttribute="trailing" constant="12" id="ebU-ZI-Awd"/>
+                            <constraint firstItem="kxv-Br-baC" firstAttribute="trailing" secondItem="Z7t-6Z-pjU" secondAttribute="centerX" constant="-16" id="g2A-Rc-OVm"/>
+                            <constraint firstItem="Z7t-6Z-pjU" firstAttribute="top" secondItem="3lq-gD-ntG" secondAttribute="bottom" constant="20" id="msF-NM-gF2"/>
+                            <constraint firstItem="Z7t-6Z-pjU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="mwr-gt-UJb"/>
+                            <constraint firstItem="3lq-gD-ntG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="xzT-39-eSV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="aRg-rr-QtX" id="CkM-IZ-pdC"/>
+                        <outlet property="fileTextField" destination="3lq-gD-ntG" id="n4u-Vq-1aj"/>
+                        <outlet property="progressLabel" destination="Xps-KX-PM5" id="i7R-qB-4r4"/>
+                        <outlet property="progressView" destination="Z7t-6Z-pjU" id="EpA-AI-CfE"/>
+                        <outlet property="startButton" destination="kxv-Br-baC" id="XGG-fd-zZe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
